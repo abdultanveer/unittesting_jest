@@ -1,4 +1,4 @@
-const sum = require('./sum');
+const sum = require('../sum');
 
 
 test('desc of add test',()=>{
