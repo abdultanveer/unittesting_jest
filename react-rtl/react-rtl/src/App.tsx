@@ -3,6 +3,9 @@ import logo from './logo.svg';
 import './App.css';
 const title = 'Hello React';
 
+//npm run test -- --coverage .
+
+
 function App() {
   return (
     <div className="App">
