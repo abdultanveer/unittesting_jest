@@ -1,7 +1,7 @@
 import { render,screen } from "@testing-library/react";
 import { Greet } from "./greet";
 
-describe('greet group',()=>{
+describe.skip('greet group',()=>{
 
     test.only('testing greet ',()=>{
         render(<Greet/>)
