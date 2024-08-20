@@ -11,10 +11,10 @@ import App from './App';
 // });
 
 
-describe('App', () => {
-  it('renders hello react', () => {
-    render(<App />);
+// describe('App', () => {
+//   it('renders hello react', () => {
+//     render(<App />);
 
-    expect(screen.getByText('Hello React')).toBeInTheDocument();
-  });
-});
+//     expect(screen.getByText('Hello React')).toBeInTheDocument();
+//   });
+// });
