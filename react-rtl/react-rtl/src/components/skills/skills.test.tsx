@@ -24,7 +24,18 @@ describe("skills", () => {
 
   test('start learning btn isnt rendered',()=>{
     render(<Skills skills={skills} />);
-    const startlearningButton = screen.getByRole("button",{name:"start learning"}) //li
+    const startlearningButton = screen.queryByRole("button",{name:"start learning"}) //li
     expect(startlearningButton).not.toBeInTheDocument();
+  })
+
+
+  test('start learning btn eventually rendered',()=>{
+    render(<Skills skills={skills} />);
+    const startlearningButton = screen.findByRole(
+        "button",{name:"start learning"},
+    {
+        timeout:1002
+    }) //li
+    expect(startlearningButton).toBeInTheDocument();
   })
 });
