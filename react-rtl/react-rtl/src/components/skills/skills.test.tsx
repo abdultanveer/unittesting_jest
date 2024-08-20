@@ -15,26 +15,28 @@ describe("skills", () => {
     expect(listItemElements).toHaveLength(skills.length)
   });
 
+  //getByRole --gets the node in the dom
+
   test('renders login button', ()=>{
     render(<Skills skills={skills} />);
     const loginButton = screen.getByRole("button",{name:"Login"}) //li
     expect(loginButton).toBeInTheDocument();
 
   })
-
+//queryByRole--asserts if the button is not in the dom
   test('start learning btn isnt rendered',()=>{
     render(<Skills skills={skills} />);
     const startlearningButton = screen.queryByRole("button",{name:"start learning"}) //li
     expect(startlearningButton).not.toBeInTheDocument();
   })
 
-
-  test('start learning btn eventually rendered',()=>{
+//findByRole  -- node will be displayed after some time
+  test('start learning btn eventually rendered',async ()=>{
     render(<Skills skills={skills} />);
-    const startlearningButton = screen.findByRole(
+    const startlearningButton = await screen.findByRole(
         "button",{name:"start learning"},
     {
-        timeout:1002
+        timeout:2000
     }) //li
     expect(startlearningButton).toBeInTheDocument();
   })
