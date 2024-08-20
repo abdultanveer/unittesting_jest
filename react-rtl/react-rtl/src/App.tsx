@@ -7,6 +7,7 @@ import Counter from './components/counter/counter';
 
 
 //npm run test -- --coverage .
+//npm install
 
 
 function App() {
