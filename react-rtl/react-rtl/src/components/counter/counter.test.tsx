@@ -41,6 +41,13 @@ describe('counter',()=>{
         expect(amountInput).toHaveValue(10)
 
 
+        const setButton = screen.getByRole('button',{
+            name:"Set"
+        })
+        await user.click(setButton)
+        const countElement = screen.getByRole('heading')
+        expect(countElement).toHaveTextContent("10")
+
      })
 
 
