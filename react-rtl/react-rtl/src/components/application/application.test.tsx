@@ -12,6 +12,9 @@ describe('application', ()=>{
 
         const jobLocationElement = screen.getByRole('combobox')
         expect(jobLocationElement).toBeInTheDocument()
+
+        const termsElement = screen.getByRole('checkbox')
+        expect(termsElement).toBeInTheDocument()
     })
 
         
