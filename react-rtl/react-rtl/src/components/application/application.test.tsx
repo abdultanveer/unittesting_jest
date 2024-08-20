@@ -6,12 +6,12 @@ describe('application', ()=>{
         render(<Application/>)
         const nameElement = screen.getByRole('textbox')
         expect(nameElement).toBeInTheDocument()
-    })
 
-    test('check if button exists',()=>{
-        render(<Application/>)
         const buttonElement = screen.getByRole('button')
         expect(buttonElement).toBeInTheDocument()
-
     })
+
+        
+
+
 })
