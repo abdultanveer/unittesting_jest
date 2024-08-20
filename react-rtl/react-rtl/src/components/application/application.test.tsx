@@ -9,6 +9,9 @@ describe('application', ()=>{
 
         const buttonElement = screen.getByRole('button')
         expect(buttonElement).toBeInTheDocument()
+
+        const jobLocationElement = screen.getByRole('combobox')
+        expect(jobLocationElement).toBeInTheDocument()
     })
 
         
